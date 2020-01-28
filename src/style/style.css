@@ -1,11 +1,11 @@
-
-.contact-list{
+.contact-list {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.contact-details{
-    border-style: groove; 
+
+.contact-details {
+    border-style: groove;
     margin: 5px;
     border-radius: 20px;
     background-color: rgb(182, 182, 182);
@@ -13,34 +13,74 @@
     text-align: center;
     width: 250px;
 }
-.user-img{
-    height:50px;
+
+.user-img {
+    height: 50px;
     width: 50px;
     border-radius: 50px;
     object-fit: cover;
     padding: 5px;
 }
 
-.user-img-detail{
-    height:90px;
+.user-img-detail {
+    height: 90px;
     width: 90px;
     border-radius: 10px;
     object-fit: cover;
     padding: 5px;
 }
-.user{
+
+.user {
     display: flex;
     align-items: center;
-    padding-left:8px;
+    padding-left: 8px;
 }
-.user-detail{
+
+.user-detail {
     height: 210px;
     width: 270px;
-    border-style: groove; 
+    border-style: groove;
     border-radius: 20px;
     padding: 5px;
     background-color: rgb(107, 107, 107);
     color: white;
-    margin: 50px auto ;
+    margin: 50px auto;
+}
 
+.clean-list {
+    list-style-type: none;
+    list-style-position: inside;
+    text-decoration: none;
+}
+
+.nav {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-right: 50px;
+    font-size: 30px;
+    text-decoration: none;
+    border-style: groove;
+}
+
+.active {
+    border-bottom: firebrick;
+    border-bottom-style: groove;
+}
+
+.edit-container{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 10px;
+
+}
+.details-controller{
+    padding-block-start: 25px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
 }

@@ -13,12 +13,9 @@ export default class ContactFilter extends Component {
     }
 
     changeInput = (ev) => {
-            let value = ev.target.value;
-            
+        let value = ev.target.value;
         this.setState( { filterBy: value } )
         this.props.onFilter(this.state.filterBy)
-
-
     }
 
     onFilterClick = () => {

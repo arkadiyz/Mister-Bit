@@ -168,6 +168,8 @@ function deleteContact(id) {
 }
 
 function _updateContact(contact) {
+  console.log("Hiiii");
+  
   return new Promise((resolve, reject) => { 
     const index = contacts.findIndex( c => contact._id === c._id)
     if (index !== -1) {

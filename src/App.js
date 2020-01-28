@@ -11,6 +11,7 @@ import ContactPage from './pages/ContactPage'
 import ContactDetailsPage from './pages/ContactDetailsPage'
 import NavLink from './cmps/NavBar'
 import ContactFilter from './cmps/ContactFilter'
+import ContactEditPage from './pages/ContactEditPage'
 
 const history = createBrowserHistory();
 function App() {
@@ -21,6 +22,9 @@ function App() {
       <Switch>
         <Route component={HomePage} path='/' exact></Route>
         <Route component={ContactPage} path='/contacts/' exact></Route>
+        <Route component={ContactEditPage} path='/contacts/' exact></Route>
+        <Route component={ContactEditPage} path='/edit/' exact></Route>
+        <Route component={ContactEditPage} path='/edit/:id' exact></Route>
         <Route component={ContactDetailsPage} path='/contacts/:id' exact></Route>
 
       </Switch>

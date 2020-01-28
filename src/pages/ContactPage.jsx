@@ -1,12 +1,13 @@
 import React from 'react';
 import { Component } from 'react';
 // import { Router, Switch, Route } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 import ContactList from '../cmps/ContactList'
 import ContactService from '../services/ContactService'
 import ContactFilter from '../cmps/ContactFilter'
 
-export default class ContactPage extends Component {
+ class ContactPage extends Component {
 
     state = {
         contacts: [],
@@ -29,11 +30,15 @@ export default class ContactPage extends Component {
         console.log(this.state.filterBy);
 
     }
+    onAddContact=()=>{
+        this.props.history.push(`/edit/`)
 
+    }
     render() {
         if (!this.state.contacts) return <div>Loading ....</div>
         else {
             return <div className="contact-list" >
+                <button onClick={this.onAddContact}>➕</button>
                 <ContactFilter onFilter={this.onFilter}></ContactFilter>
 
                 <ContactList contacts={this.state.contacts}></ContactList>
@@ -41,3 +46,4 @@ export default class ContactPage extends Component {
         }
     }
 }
+export default withRouter(ContactPage);
